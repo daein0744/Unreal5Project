@@ -1,0 +1,49 @@
+# Build 결과물, 바이너리 파일, 중간 파일들
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+
+# 프로젝트 환경설정 파일
+.vscode/
+.idea/
+*.sln
+*.xcodeproj
+*.xcworkspace
+
+# 유저별 설정 파일
+*.userprefs
+*.user
+
+# 자동 생성된 로그 파일
+*.log
+
+# 임시 파일들
+*.tmp
+*.bak
+*.swp
+
+# 압축 해제된 플러그인
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+Plugins/*/Saved/
+
+# 빌드된 플랫폼에 따라 생성되는 파일들
+*.target
+*.module
+*.class
+*.dll
+*.exe
+*.lib
+*.so
+*.dylib
+
+# 시스템 파일들
+.DS_Store
+Thumbs.db
+*.db
+
+
+# Git LFS를 사용하는 경우에는 아래의 항목을 Git에서 무시할 필요 없음
+# Content/   <-- LFS에 설정된 큰 에셋 파일들(예: .uasset)은 제외하지 말 것.
