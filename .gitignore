@@ -43,7 +43,8 @@ Plugins/*/Saved/
 .DS_Store
 Thumbs.db
 *.db
-
+*.ipch
+.vs/
 
 # Git LFS를 사용하는 경우에는 아래의 항목을 Git에서 무시할 필요 없음
 # Content/   <-- LFS에 설정된 큰 에셋 파일들(예: .uasset)은 제외하지 말 것.
