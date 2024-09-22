@@ -7,6 +7,13 @@
 #include "InputActionValue.h"
 #include "MyCharacterPlayer.generated.h"
 
+enum class CameraView
+{
+	Shoulder,
+	Quater,
+	END
+};
+
 /**
  * 
  */
@@ -23,7 +30,10 @@ protected:
 
 public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
 
+	class UMyCharacterControlData* GetCharacterControlData(CameraView View);
+	void SetCharacterControlData(const class UMyCharacterControlData* CharacterControlData);
 
 // Camera Section
 protected:
@@ -42,11 +52,26 @@ protected:
 	TObjectPtr<class UInputAction> JumpAction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, Meta = (AllowPrivateAccess = "true"))
-	TObjectPtr<class UInputAction> MoveAction;
+	TObjectPtr<class UInputAction> ShoulderMoveAction;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, Meta = (AllowPrivateAccess = "true"))
-	TObjectPtr<class UInputAction> LookAction;
+	TObjectPtr<class UInputAction> ShoulderLookAction;
 
-	void Move(const FInputActionValue& Value);
-	void Look(const FInputActionValue& Value);
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, Meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<class UInputAction> QuaterMoveAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, Meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<class UInputAction> ToggleCharacterControlDataAction;
+
+	void ToggleCharacterControlData(const FInputActionValue& Value);
+	void ShoulderMove(const FInputActionValue& Value);
+	void ShoulderLook(const FInputActionValue& Value);
+	void QuaterMove(const FInputActionValue& Value);
+
+// CharcterControlData Section
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = CharacterContorolData, Meta = (AllowPrivateAccess = "true"))
+	TArray<TObjectPtr<class UMyCharacterControlData>> CharacterControlDataManager;
+
+	CameraView CurrentCameraView;
 };
