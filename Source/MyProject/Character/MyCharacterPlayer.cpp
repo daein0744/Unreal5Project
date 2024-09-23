@@ -21,13 +21,13 @@ AMyCharacterPlayer::AMyCharacterPlayer()
 
 	// CharacterControlData Setting
 	CharacterControlDataManager.SetNum(static_cast<int32>(CameraView::END));
-	static ConstructorHelpers::FObjectFinder<UMyCharacterControlData> CharacterContorlDataShoulderRef(TEXT("/Script/MyProject.MyCharacterControlData'/Game/CharacterControlData/CCD_Shoulder.CCD_Shoulder'"));
+	static ConstructorHelpers::FObjectFinder<UMyCharacterControlData> CharacterContorlDataShoulderRef(TEXT("/Script/MyProject.MyCharacterControlData'/Game/MyGame/CharacterControlData/CCD_Shoulder.CCD_Shoulder'"));
 	if (CharacterContorlDataShoulderRef.Object)
 	{
 		CharacterControlDataManager[static_cast<int32>(CameraView::Shoulder)] = CharacterContorlDataShoulderRef.Object;
 	}
 
-	static ConstructorHelpers::FObjectFinder<UMyCharacterControlData> CharacterContorlDataQuaterrRef(TEXT("/Script/MyProject.MyCharacterControlData'/Game/CharacterControlData/CCD_Quater.CCD_Quater'"));
+	static ConstructorHelpers::FObjectFinder<UMyCharacterControlData> CharacterContorlDataQuaterrRef(TEXT("/Script/MyProject.MyCharacterControlData'/Game/MyGame/CharacterControlData/CCD_Quater.CCD_Quater'"));
 	if (CharacterContorlDataQuaterrRef.Object)
 	{
 		CharacterControlDataManager[static_cast<int32>(CameraView::Quater)] = CharacterContorlDataQuaterrRef.Object;

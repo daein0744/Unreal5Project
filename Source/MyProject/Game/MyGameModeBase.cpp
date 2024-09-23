@@ -5,7 +5,7 @@
 
 AMyGameModeBase::AMyGameModeBase()
 {
-	static ConstructorHelpers::FClassFinder<APawn> DefaultPawnClassRef(TEXT("/Game/Characters/BP_MyCharacterPlayer.BP_MyCharacterPlayer_C"));
+	static ConstructorHelpers::FClassFinder<APawn> DefaultPawnClassRef(TEXT("/Game/MyGame/Characters/BP_MyCharacterPlayer.BP_MyCharacterPlayer_C"));
 	if (DefaultPawnClassRef.Class)
 	{
 		DefaultPawnClass = DefaultPawnClassRef.Class;
