@@ -1,7 +1,10 @@
 # 프로젝트명 : AvoidPoop
 **프로젝트 목적** : 언리얼 엔진에 익숙해지기 위해 만들어본 간단한 프로젝트입니다.
+
 **프로젝트 기간** : 2024.09.27 - 2024.10.01  
+
 **영상 링크** : [https://www.youtube.com/watch?v=LK9fiBAMyh4](https://www.youtube.com/watch?v=LK9fiBAMyh4)  
+
 **소스코드 경로** : Source/MyProject/
 
 **설명**
